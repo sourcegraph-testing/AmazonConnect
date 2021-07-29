@@ -4,7 +4,7 @@ const initAppInsights = require('./appInsights.js');
 const { getSecret } = require('./secretManager.js');
 const { SOURCE } = require('./constants.js');
 
-async function getJob(jobUrl, tenantName, folderId, access_token) {
+const :[fn~\w+] = async (jobUrl, tenantName, folderId, access_token) => {
     return new Promise((resolve, reject) => {
         let getJobStatusOptions = url.parse(jobUrl);
         getJobStatusOptions.method = 'GET';
@@ -39,7 +39,7 @@ async function getJob(jobUrl, tenantName, folderId, access_token) {
     });
 }
 
-function flatten(data, response = {}, flatKey = "") {
+const :[fn~\w+] = (data, response = {}, flatKey = "") => {
     for (const [key, value] of Object.entries(data)) {
         const newFlatKey = `${flatKey}${key}`;
         if (typeof value === "object" && value !== null && Object.keys(value).length > 0) {

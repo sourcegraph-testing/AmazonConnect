@@ -9,14 +9,14 @@ const { getSecret, updateSecret } = require('./secretManager.js');
 const { SOURCE } = require('./constants.js');
 const initAppInsights = require('./appInsights.js');
 
-function getReason(err) {
+const :[fn~\w+] = (err) => {
 	if (err)
 		return err.message;
 	else
 		return '';
 }
 
-async function sendResponse(event, context, status, err) {
+const :[fn~\w+] = async (event, context, status, err) => {
 	return new Promise((resolve, reject) => {
 		// only send response when called via CFT
 		if (!event.ResponseURL || !event.StackId || !event.RequestId || !event.LogicalResourceId) {
@@ -67,7 +67,7 @@ async function sendResponse(event, context, status, err) {
 	});
 }
 
-async function getNewAccessToken(authUrl, client_id, user_key) {
+const :[fn~\w+] = async (authUrl, client_id, user_key) => {
 	let apiAccessAuthOptions = url.parse(authUrl);
 	let apiAccessAuthBody = JSON.stringify({
 		grant_type: 'refresh_token',

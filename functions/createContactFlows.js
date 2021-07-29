@@ -6,7 +6,7 @@ const path = require('path');
 const initAppInsights = require('./appInsights.js');
 const { SOURCE } = require('./constants.js');
 
-function createContactFlow(properties, contactFlow) {
+const :[fn~\w+] = (properties, contactFlow) => {
     var contactFlowBody = JSON.stringify(require(contactFlow));
 
     if (!properties.bucketName)
@@ -67,7 +67,7 @@ createContactFlow.handler = async function (event, context) {
     }
 };
 
-function getReason(err) {
+const :[fn~\w+] = (err) => {
     if (err)
         return err.message;
     else
@@ -75,7 +75,7 @@ function getReason(err) {
 }
 
 
-function sendResponse(event, context, status, err) {
+const :[fn~\w+] = (event, context, status, err) => {
     // only send response when called via CFT
     if (!event.ResponseURL || !event.StackId || !event.RequestId || !event.LogicalResourceId) {
         return;
@@ -144,7 +144,7 @@ if (require.main === module) {
     });
 }
 
-function usageExit() {
+const :[fn~\w+] = () => {
     console.error('Usage: ' + path.basename(process.argv[1]) + ' json-array');
     process.exit(1);
 }
